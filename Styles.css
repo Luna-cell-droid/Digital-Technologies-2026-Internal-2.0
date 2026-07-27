@@ -1,0 +1,48 @@
+body{
+    background-color: #A1CCA5;
+    margin: 0;
+    /*Remove default margin*/
+    font-family: "Gentium Plus", serif;
+}
+/*This is the styling for the navbar*/
+.navbar img {
+    height: 150px;
+    width: auto;
+}
+.navbar{
+    background-color: #A1CCA5;
+    display: flex;
+    align-items: center;/*vertically center items on the navbar*/
+    padding: 10px 40px;
+}
+
+.navbar a:first-child{
+    margin-right: auto; /*push everything to the right*/
+}
+
+.links {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.links ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 20px;
+    justify-content: space-evenly; /*center link horizontally*/
+    width: 100%;
+}
+    
+.links li{
+    margin: 0 10px;
+}
+
+.links a {
+    text-decoration: none;
+    font-size: 20px;
+    font-family:'Gentium Plus',serif ;
+    color: black;
+}
