@@ -46,3 +46,11 @@ body{
     font-family:'Gentium Plus',serif ;
     color: black;
 }
+.navbarimage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+}
