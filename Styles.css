@@ -173,6 +173,7 @@ body.dyslexia{
 .intro-text{
     width: 60%;
     margin: auto;
+    text-align: center;
 }
 .intro-text p{
     color: #E8E0B5;
@@ -183,6 +184,7 @@ body.dyslexia{
 /*The first contents section*/
 .homepage-section-one{
     display: grid;
+    grid-template-columns: 2fr 1fr;
 }
 .homepage-section-left{
     background-color: #7E9D7B;
@@ -215,6 +217,9 @@ body.dyslexia{
 }
 .homepage-link:hover{
     background-color: #C7D9B7;
+}
+.homepage-link div{
+    margin: 0;
 }
 .arrow{
     font-size: 36px;
