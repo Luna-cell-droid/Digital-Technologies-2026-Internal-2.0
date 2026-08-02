@@ -111,22 +111,28 @@ body{
 }
 /*styling of the dropdown menu*/
 .dropdown-contents{
-    display: none;
+    
     position: absolute;
     top: 100%;
     left: 0;
-    transform: translate(-30%);
+    transform: translateX(-50%) translateY(-15px);
     min-width: 300px;
     background-color: rgba(28, 40, 28, 0.55);
     backdrop-filter: blur(10px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     border-radius: 6px;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: all .3s ease;
     z-index: 10;
 }
 /*This displays after the content being created*/
 .dropdown-contents.show{
     display: block;
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-30%) translateY(0);
 }
 /*styling of links inside the menu*/
 .dropdown-contents li a{
