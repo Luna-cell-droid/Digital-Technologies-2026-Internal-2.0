@@ -146,3 +146,22 @@ body{
 .dropdown-contents li a:hover{
     background-color: rgba(255, 255, 255, 0.15);
 }
+
+/*Making the options in the dropdowm menu to work like change the colours*/
+body.protanomaly {
+    filter: saturate(80%);
+}
+body.deuteranomaly {
+    filter: hue-rotate(-15deg);
+}
+body.tritanopia {
+    filter: hue-rotate(40deg);
+}
+body.achromatopsia {
+    filter: grayscale(100%);
+}
+body.dyslexia{
+    letter-spacing: 2px;
+    line-height: 1.8;
+    font-size: 110%;
+}

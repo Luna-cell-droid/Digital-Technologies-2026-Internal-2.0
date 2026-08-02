@@ -14,3 +14,22 @@ window.onclick = function(event) {
         }
     }
 }
+
+function changeMode(mode) {
+    //Remove any modes that is already applied 
+    document.body.classList.remove(
+        "normal",
+        "protanomaly",
+        "deuteranomaly",
+        "tritanopia",
+        "achromatopsia",
+        "dyslexia"
+    );
+    //If the end user clicks normal it would make the website as it was 
+    if (mode === 'normal'){
+        return;
+    }
+    
+    //Applying selected mode 
+    document.body.classList.add(mode);
+}
