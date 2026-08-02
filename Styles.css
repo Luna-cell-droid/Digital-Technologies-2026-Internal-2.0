@@ -54,6 +54,11 @@ body{
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
+.links a:hover{
+    color: #C7D9B7;
+    transition: color 0.3s ease;
+}
+
 .navbarimage{
     position: relative; /*Allows the navbar to be on the top*/
     height: 600px;
