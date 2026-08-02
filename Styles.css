@@ -167,7 +167,7 @@ body.dyslexia{
 }
 /*Intro section*/
 .intro-section{
-    background-color: #111111;
+    background-color: #111D13;
     padding: 60px 0;
 }
 .intro-text{
@@ -216,7 +216,7 @@ body.dyslexia{
     transition: .3s;
 }
 .homepage-link:hover{
-    background-color: #C7D9B7;
+    background-color: #a9c492;
 }
 .homepage-link div{
     margin: 0;
