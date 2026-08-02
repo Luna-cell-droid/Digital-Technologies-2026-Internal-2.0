@@ -235,7 +235,7 @@ body.dyslexia{
 }
 .homepage-section-row{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 60% 40%;
     gap: 40px;
     align-items: center;
     margin-bottom: 40px;
@@ -246,7 +246,7 @@ body.dyslexia{
     line-height: 1.5;
     margin: 0;
 }
-.homepage-section-two-img{
+.homepage-section-row-img img{
     width: 100%;
     display: block;
 }
