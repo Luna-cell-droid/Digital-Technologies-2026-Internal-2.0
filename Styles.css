@@ -165,3 +165,61 @@ body.dyslexia{
     line-height: 1.8;
     font-size: 110%;
 }
+/*Intro section*/
+.intro-section{
+    background-color: #111111;
+    padding: 60px 0;
+}
+.intro-text{
+    width: 60%;
+    margin: auto;
+}
+.intro-text p{
+    color: #E8E0B5;
+    font-size: 24px;
+    line-height: 1.6;
+    margin: 0;
+}
+/*The first contents section*/
+.homepage-section-one{
+    display: grid;
+}
+.homepage-section-left{
+    background-color: #7E9D7B;
+    padding: 25px;
+}
+.homepage-section-left img{
+    width: 100%;
+    display: block;
+}
+.homepage-section-left p{
+    font-size: 22px;
+    line-height: 1.6;
+}
+.homepage-section-right{
+    background-color: #A1CCA5;
+    display: flex;
+    flex-direction: column;
+}
+.homepage-link{
+    flex: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 35px;
+    text-decoration: none;
+    color: black;
+    font-size: 28px;
+    border-bottom: 1px solid rgba(0, 0, 0, .15);
+    transition: .3s;
+}
+.homepage-link:hover{
+    background-color: #C7D9B7;
+}
+.arrow{
+    font-size: 36px;
+    transition: .3s;
+}
+.homepage-link:hover .arrow{
+    transform: translateX(8px);
+}
