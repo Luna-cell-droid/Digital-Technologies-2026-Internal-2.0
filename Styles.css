@@ -215,13 +215,13 @@ body.dyslexia{
     border-bottom: 1px solid rgba(0, 0, 0, .15);
     transition: .3s;
 }
-.homepage-link:hover{
+.homepage-link:hover{/*This is the hovering effect for the links that take them to the next webpage*/
     background-color: #a9c492;
 }
 .homepage-link div{
     margin: 0;
 }
-.arrow{
+.arrow{/*The arrows that are on the right side of the links*/
     font-size: 36px;
     transition: .3s;
 }
