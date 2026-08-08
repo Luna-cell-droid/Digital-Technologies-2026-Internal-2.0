@@ -394,3 +394,75 @@ body.dyslexia{
     line-height: 1.5;
     margin: 0;
 }
+/*Weekly challenges section*/
+/*Main weekly challenges section*/
+.weekly-challenges{
+    width: 100%;
+    background-color: #A1CCA5;
+}
+/*Introduction part of the webpage*/
+.weekly-introduction{
+    background-color: #111D13;
+    padding: 35px 40px;
+}
+.weekly-introduction p{
+    color:  #E8E0B5;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+/*weekly challenges list*/
+.challenge-list{
+    background-color: #709775;
+    padding: 20px 35px;
+}
+/*each individual challenges*/
+.challenge{
+    display: grid;
+    grid-template-columns: 30px 1fr;
+    align-items: center;
+    min-height: 50px;
+    cursor: pointer;
+}
+/*This is for hiding normal checkbox*/
+.challenge-checkbox{
+    display: none;
+}
+/*Customized checkbox*/
+.checkmark{
+    width: 18px;
+    height: 18px;
+    background-color: white;
+    border: 1px solid #111D13;
+    box-sizing: border-box;
+}
+/*Tick when it is checked*/
+.challenge-checkbox:checked + .checkmark::after{
+    content: "✓";
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    color: #111D13;
+    font-size: 15px;
+}
+/*Text*/
+.challenge-text{
+    color: white;
+    font-size: 18px;
+    line-height: 1.4;
+    padding-left: 10px;
+}
+/*completed challenge checkbox*/
+.challenge-checkbox:checked ~.challenge-text{
+    opacity: 0.6;
+    text-decoration: line-through;
+}
+/*Weekly progress*/
+.weekly-progress{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #A1CCA5;
+}
+
