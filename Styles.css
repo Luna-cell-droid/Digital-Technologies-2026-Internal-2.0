@@ -269,7 +269,7 @@ body.dyslexia{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: auto auto;
-    background-color: #A1CCA5;;
+    background-color: #709775;;
 }
 /*This is the image on the left*/
 .webpage-image{
@@ -287,7 +287,7 @@ body.dyslexia{
 .webpage-text{
     grid-column: 1;
     grid-row: 2;
-    background-color: #A1CCA5;
+    background-color: #709775;
     padding: 40px;
     box-sizing: border-box;
 }
