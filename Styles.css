@@ -319,17 +319,16 @@ body.dyslexia{
 
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
 }
-.links-link:last-child{
-    border-bottom: none;
-}
-.links-link span:first-child{
-    font-size: 20px;
+.links-link:hover{/*This is the hovering effect for the links that take them to the next webpage*/
+    background-color: #a9c492;
 }
 .arrow{
     font-size: 40px;
     line-height: 1;
 }
-
+.homepage-link:hover .arrow{
+    transform: translateX(8px);
+}
 /*This is the section underneath*/
 .webpage-section-two{
     background-color: #526D4D;
