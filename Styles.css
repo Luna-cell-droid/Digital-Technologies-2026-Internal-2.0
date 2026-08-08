@@ -264,3 +264,84 @@ body.dyslexia{
     line-height: 1.6;
     margin: 0;
 }
+/*This is the first section of webpage*/
+.webpage-section-one{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background-color: #A1CCA5;
+}
+/*This is the image to the left*/
+.webpage-image{
+    width: 100%;
+    display: block;
+}
+/*Text that is present underneath the image*/
+.webpage-text{
+    background-color: #7E9D7B;
+    padding: 25px;
+}
+.webpage-text p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+/*This is the section underneath*/
+.webpage-section-two{
+    background-color: #526D4D;
+    padding: 25px;
+}
+/*first row of text on the right and image on the left*/
+.webpage-row{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: center;
+    margin-bottom: 40px;
+}
+/*First row image*/
+.webpage-row-image img{
+    width: 100%;
+    display: block;
+}
+/*First row text*/
+.webpage-row-text{
+    padding: 20px;
+}
+.webpage-row-text p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+/*Second row of text*/
+/*Text on the left*/
+.webpage-row-text-two {
+    padding: 20px;
+}
+.webpage-row-text-two p{
+    color: white;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
+/*Image on the right*/
+.webpage-row-image-two img{
+    width: 100%;
+    display: block;
+}
+/*Footer of webpage*/
+.webpage-footer{
+    background-color: #111D13;
+    padding: 50px 0;
+}
+.webpage-footer-text{
+    width: 60%;
+    margin: auto;
+}
+.webpage-footer-text p{
+    color: #E8E0B5;
+    font-size: 22px;
+    line-height: 1.5;
+    margin: 0;
+}
