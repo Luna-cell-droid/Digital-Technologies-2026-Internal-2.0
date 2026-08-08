@@ -465,4 +465,37 @@ body.dyslexia{
     grid-template-columns: 1fr 1fr;
     background-color: #A1CCA5;
 }
-
+/*progress text*/
+.weekly-progress-text{
+    padding: 40px;
+}
+.weekly-progress-text p{
+    color: #111D13;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0 0 15px 0;
+}
+/*Image of the progress that is made*/
+.weekly-progress-image{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.weekly-progress-image img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/*Footer of weekly challenge webpage*/
+.weekly-footer{
+    background-color: #111D13;
+    padding: 45px 40px;
+}
+.weekly-footer p{
+    color: #E8E0B5;
+    font-size: 20px;
+    line-height: 1.5;
+    margin: 0;
+}
