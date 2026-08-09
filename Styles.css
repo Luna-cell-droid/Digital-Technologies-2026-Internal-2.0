@@ -1,6 +1,7 @@
 body{
     background-color: #A1CCA5;
     margin: 0;
+    padding: 0;
     /*Remove default margin*/
     font-family: "Gentium Plus", serif;
 }
@@ -404,6 +405,7 @@ body.dyslexia{
 .weekly-introduction{
     background-color: #111D13;
     padding: 35px 40px;
+    box-sizing: border-box;
 }
 .weekly-introduction p{
     color:  #E8E0B5;
@@ -415,6 +417,7 @@ body.dyslexia{
 .challenge-list{
     background-color: #709775;
     padding: 20px 35px;
+    box-sizing: border-box;
 }
 /*each individual challenges*/
 .challenge{
@@ -455,7 +458,7 @@ body.dyslexia{
     padding-left: 10px;
 }
 /*completed challenge checkbox*/
-.challenge-checkbox:checked ~.challenge-text{
+.challenge-checkbox:checked ~ .challenge-text{
     opacity: 0.6;
     text-decoration: line-through;
 }
@@ -463,24 +466,37 @@ body.dyslexia{
 .weekly-progress{
     display: grid;
     grid-template-columns: 1fr 1fr;
+    width: 100%;
     background-color: #A1CCA5;
+    box-sizing: border-box;
 }
 /*progress text*/
 .weekly-progress-text{
     padding: 40px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 .weekly-progress-text p{
     color: #111D13;
     font-size: 20px;
     line-height: 1.5;
-    margin: 0 0 15px 0;
+    margin: 0 0 20px 0;
+}
+/*weekly progress heading*/
+.weekly-progress-text .progress-title{
+    font-size: 24px;
+    margin-bottom: 30px;
 }
 /*Image of the progress that is made*/
 .weekly-progress-image{
     width: 100%;
+    min-height: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-sizing: border-box;
 }
 .weekly-progress-image img{
     width: 100%;
@@ -492,6 +508,7 @@ body.dyslexia{
 .weekly-footer{
     background-color: #111D13;
     padding: 45px 40px;
+    box-sizing: border-box;
 }
 .weekly-footer p{
     color: #E8E0B5;
