@@ -33,174 +33,44 @@ function changeMode(mode) {
     //Applying selected mode 
     document.body.classList.add(mode);
 }
-//Weekly challenge system
-const challenges = document.querySelectorAll( ".challenge-checkbox");
-//Find the points and image
+//Weeky challenges system
+// Find all the challenge checkboxes
+const challenges = document.querySelectorAll(".challenge-checkbox");
+console.log(challenges.length);
+// Find the points displays
 const weeklyPointsDisplay = document.getElementById("weeklyPoints");
 const totalPointsDisplay = document.getElementById("totalPoints");
-const progressImage = document.getElementById("progressImage");
-const progressMessage = document.getElementById("progressMessage");
-//find the correct week
-function getCurrentWeek() {
 
-    const today = new Date();
+// Starting points
+let weeklyPoints = 0;
+let totalPoints = 0;
+// Add points when a challenge is checked or unchecked
+challenges.forEach(function(challenge) {
 
-    const firstDay = new Date(today.getFullYear(), 0, 1);
+    challenge.addEventListener("change", function() {
 
-    const difference = today - firstDay;
+        const points = Number(challenge.dataset.points);
 
-    const days = Math.floor(
-            difference / (1000 * 60 * 60 * 24)
-        );
+        // If the challenge is checked
+        if (challenge.checked) {
 
-    const week = Math.ceil(
-            (days + firstDay.getDay() + 1) / 7
-        );
+            weeklyPoints = weeklyPoints + points;
+            totalPoints = totalPoints + points;
 
-    return today.getFullYear() + "-week-" + week;
-}
-//Load the saved information 
-let savedData = JSON.parse(
-        localStorage.getItem("EarthBeatWeeklyChallenges")
-    );
-//In case if there is no saved data
-if(savedData === null){
-
-    savedData = {
-        week: getCurrentWeek(),
-        weeklyPoints: 0,
-        totalPoints: 0,
-        completedChallenges: []
-    };
-
-}
-//Check the points for new week
-const currentWeek = getCurrentWeek();
-
-
-if(savedData.week !== currentWeek){
-
-    savedData.week = currentWeek;
-    savedData.weeklyPoints =  0;
-    savedData.completedChallenges = [];
-
-}
-//Saving data
-function saveData(){
-
-    localStorage.setItem(
-        "EarthBeatWeeklyChallenges",
-        JSON.stringify(savedData)
-    );
-
-}
-//Restoring the checkboxes back to its original position
-challenges.forEach( function(challenge, index){
-        if(
-            savedData.completedChallenges.includes(index)){
-            challenge.checked = true;
         }
-    }
-);
-//changing the progress image according to the points
-function updateProgressImage(){
 
-    if(savedData.weeklyPoints === 0){
+        // If the challenge is unchecked
+        else {
 
-        progressImage.src =  "";
+            weeklyPoints = weeklyPoints - points;
+            totalPoints = totalPoints - points;
 
-        progressMessage.textContent =
-            "LOREM IPSUM";
+        }
 
-    }
+        // Update the numbers on the webpage
+        weeklyPointsDisplay.textContent = weeklyPoints;
+        totalPointsDisplay.textContent = totalPoints;
 
-    else if(savedData.weeklyPoints <= 20){
+    });
 
-        progressImage.src = "";
-        progressMessage.textContent =
-            "LOREM IPSUM";
- }
-
-    else if(savedData.weeklyPoints <= 40){
-
-        progressImage.src = "";
-        progressMessage.textContent =
-            "LOREM IPSUM";
-    }
-    else if(savedData.weeklyPoints <= 60){
-
-        progressImage.src = "";
-        progressMessage.textContent =
-            "LOREM IPSUM";
-    }
-
-    else if(savedData.weeklyPoints < 80){
-
-        progressImage.src = "";
-
-        progressMessage.textContent =
-            "LOREM IPSUM";
-    }
-    else{
-
-        progressImage.src = "";
-
-        progressMessage.textContent =
-            "LOREM IPSUM";
-    }
-
-}
-//updating the screen
-function updateDisplay(){
-
-    weeklyPointsDisplay.textContent =
-        savedData.weeklyPoints;
-
-    totalPointsDisplay.textContent =
-        savedData.totalPoints;
-
-    updateProgressImage();
-
-    saveData();
-}
-//When the challenge is clicked 
-challenges.forEach(function(challenge, index){
-
-        challenge.addEventListener( "change",function(){
-                const points = Number(
-                        challenge.dataset.points
-                    );
-//when challenge is completed 
-  if(challenge.checked){
-    if(!savedData.completedChallenges.includes(index)){
-
-                    savedData.weeklyPoints += points;
-                    savedData.totalPoints += points;
-                    savedData.completedChallenges.push(index);
-
-                }
-            }
-//When challenge is unchecked
-else{
- if (savedData.completedChallenges.includes(index)) {
-                    savedData.weeklyPoints -= points;
-                    savedData.totalPoints -= points;
-                    savedData.completedChallenges =
-                        savedData.completedChallenges.filter(
-                            function(number){
-                                return number !== index;
-
-                            }
-                        );
-                }
-     }
-//Update the website
-        updateDisplay();
-
-            }
-        );
-
-    }
-);
-//Load the initial information
-updateDisplay();
+});
