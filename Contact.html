@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EarthBeat</title>
+    <link rel="stylesheet" href="Styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Gentium+Plus:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <section class="navbarimage"><!--This is the background image for the navbar-->
+        <img class="navbarimage-image" src="Images\contact-image.jpg" alt="Homepage Image">
+            <script src="Modes.js"></script>
+        <header class="navbar">
+        <!--This is navbar and should be added to every page-->
+            <a href="Homepage.html">
+             <!--This makes the image or logo to navigate back to the homepage when clicked-->
+                <img src="Images/Logo.png" alt="Logo">
+             </a>
+            <nav class="links"> <!--This is the links of the navigation bar-->
+         
+                <ul>
+                    <li> <a class="Contact" href="Contact.html"> Contact</a></li>
+                    <li> <a class="WeeklyChallenges" href="Weeklychallenges.html"> Weekly Challenges</a></li>
+                    <!--This is for the dropdown menu-->
+                    <li class="dropdown">
+                         <a class="Modes" href="#" onclick="toggleDropdown(event)">Modes</a>
+                         <ul class="dropdown-contents" id="dropdownMenu">
+                            <li> <a href="#" onclick="changeMode('normal')">Normal</a></li>
+                            <li> <a href="#" onclick="changeMode('protanomaly')">Protanomaly (red-weak)</a></li>
+                            <li> <a href="#" onclick="changeMode('deuteranomaly')">Deuteranomaly (green-weak)</a></li>
+                            <li> <a href="#" onclick="changeMode('tritanopia')">Tritanopia (Blue-yellow)</a></li>
+                            <li> <a href="#" onclick="changeMode('achromatopsia')">Achromatopsia (All colour)</a></li>
+                            <li> <a href="#" onclick="changeMode('dyslexia')">Dyslexia</a></li>
+                         </ul>
+                    </li>
+                </ul>
+            </nav>
+        </header>
+            <div class="navbarimage-text"> <!--Text to welcome the users-->
+                <h1>Earthbeat</h1>
+                <p>Climate change and actions to help the planet</p>
+            </div>
+   </section>
