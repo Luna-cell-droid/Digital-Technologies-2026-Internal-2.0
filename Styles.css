@@ -288,8 +288,8 @@ body.dyslexia{
 /*This is the first section of webpage*/
 .webpage-section-one{
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: minmax(0, 60%) minmax(0, 40%);
+    grid-template-rows: 300px auto;
     background-color: #709775;
     width: 100%;
     box-sizing: border-box;
@@ -300,15 +300,14 @@ body.dyslexia{
     grid-column: 1;
     grid-row: 1;
     width: 100%;
-    height: 100%;
+    height: 300px;
     min-width: 0;
-    display: block;
-    object-fit: cover;
+    padding: 10px;
     box-sizing: border-box;
 }
 .webpage-image img{
     width: 100%;
-    height: 100%;
+    height: 300px;
     display: block;
     object-fit: cover;
 }
@@ -329,12 +328,14 @@ body.dyslexia{
 /*The three links that is at the side (it was again coded due to it being extended)*/
 .links-section-right{
     grid-column: 2;
-    grid-row: 1 / 3;/*reng;wrg*/
+    grid-row: 1 / 3;
     display: grid;
     grid-template-rows: repeat(3, 1fr);
     background-color: #A1CCA5;
+    min-width: 0;
 }
 .links-link{
+    font-size: 25px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -343,6 +344,7 @@ body.dyslexia{
     color: black;
     text-decoration: none;
     border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    min-width: 0;
 }
 .links-link:hover{/*This is the hovering effect for the links that take them to the next webpage*/
     background-color: #a9c492;
