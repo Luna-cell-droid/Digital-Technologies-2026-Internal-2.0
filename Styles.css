@@ -365,7 +365,7 @@ body.dyslexia{
     width: 100%;
 }
 .webpage-section-two img{
-    max-width: 100%;
+    min-width: 0;
 }
 /*first row of text on the right and image on the left*/
 .webpage-row{
@@ -373,6 +373,7 @@ body.dyslexia{
     grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
     width: 100%;
     box-sizing: border-box;
+    align-items: center;
 }
 /*First row image*/
 .webpage-row-image{
@@ -411,6 +412,9 @@ body.dyslexia{
 /*Image on the right*/
 .webpage-row-image-two{
     min-width: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
 }
 .webpage-row-image-two img{
     width: 100%;
