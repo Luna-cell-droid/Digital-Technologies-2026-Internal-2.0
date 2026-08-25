@@ -15,7 +15,7 @@ window.onclick = function(event) {
     }
 }
 
-function changeMode(mode) {
+function changeMode(mode) { //This is to change the accessibility modes
     //Remove any modes that is already applied 
     document.body.classList.remove(
         "normal",
@@ -33,6 +33,30 @@ function changeMode(mode) {
     //Applying selected mode 
     document.body.classList.add(mode);
 }
+//This is the function that will help to read the webpage out loud 
+function toggleScreenReader(){
+    //When the screen reader is already reading and you want to stop it
+    if (window.speechSynthesis.speaking ||
+        window.speechSynthesis.pending) {
+            window.speechSynthesis.cancel();
+            return;
+        }
+        //This gets all the text from the webpage
+        let text = document.body.innerText.trim();
+        //checking if there is any text to read
+        if (text === ""){
+            return;
+        }
+        //This is creating the speech
+        let speech = new SpeechSynthesisUtterance(text);
+        //This controls how the speech should sound like 
+        speech.rate = 1;
+        speech.pitch = 1;
+        speech.volume = 50;
+        //This reads the webpage
+        window.speechSynthesis.speak(speech);
+};
+
 //Weekly challenges system
 // Find all challenge checkboxes
 const challenges = document.querySelectorAll(".challenge-checkbox");
