@@ -374,6 +374,11 @@ body.dyslexia{
     width: 100%;
     box-sizing: border-box;
     align-items: center;
+    background-color: #709775;
+    margin-bottom: 25px;
+}
+.webpage-row:nth-child(2){
+    background-color: #A1CCA5;
 }
 /*First row image*/
 .webpage-row-image{
