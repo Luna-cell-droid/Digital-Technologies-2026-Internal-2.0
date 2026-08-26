@@ -54,11 +54,11 @@
        <!--The text under the image-->
        <div class="webpage-text">
             <p>There are four major greenhouse gases that are either produced or already on Earth. Now you have a question: what are Greenhouse gases? Greenhouse gases are gases that are present in the atmosphere of the Earth which helps to trap heat of the sun in the atmosphere
-               and keep the planet warm. The four major greenhouse gases are carbon dioxide, methane, Nitrous Oxide, Chlorofluorocarbons (CFCs).
+               and keep the planet warm. The four major greenhouse gases are carbon dioxide, methane, Nitrous Oxide, <span class="jargon" onclick="showDefinition('Chlorofluorocarbons')">Chlorofluorocarbons</span>(CFCs).
             </p>
             <p> Carbon dioxide can be released through two ways. Naturally, it is through volcanic eruptions. However, through human activities such as burning fossil fuels and deforestation it can release carbon dioxide. 
-                Methane comes from plant matter breakdown in wetlands and is also released from landfills, rice farming and livestock animals emit methane from their digestion and manure. Nitrous Oxide is produced by farming practices, commercial and organic fertilizer production and use. 
-                It also comes from burning fossil fuels and vegetation. Chlorofluorocarbons (CFCs) are entirely industrial in origin. They are used as refrigerants, solvents and spray can propellants.
+                Methane comes from plant matter breakdown in wetlands and is also released from landfills, rice farming and livestock animals emit methane from their digestion and manure. Nitrous Oxide is produced by farming practices, commercial and <span class="jargon" onclick="showDefinition('organic fertilizer')">organic fertilizer</span> production and use. 
+                It also comes from burning fossil fuels and vegetation. Chlorofluorocarbons (CFCs) are entirely industrial in origin. They are used as  <span class="jargon" onclick="showDefinition('refrigerants')">refrigerants</span>, <span class="jargon" onclick="showDefinition('solvents')">solvents</span> and spray can <span class="jargon" onclick="showDefinition('propellants')">propellants</span>.
             </p>
        </div>
        <!--Three links on the right side of the webpage-->
@@ -105,5 +105,11 @@
            <p>LOREM IPSUM</p>
        </div>
    </section>
+<!--This is the jargon Dictionary Section-->
+    <div id="jargonBox" class="jargon-box">
+        <button class="close-jargon" onclick="closeDefinition()">×</button>
+        <h2 id="jargonTitle"></h2>
+        <p id="jargonDefinition"></p>
+    </div>
 </body>
 </html>

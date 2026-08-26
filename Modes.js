@@ -226,7 +226,28 @@ function showDefinition(word){
     //This is where the dictionary definitions are
     const definitions = {
         "deforestation": 
-        " [noun] the action of clearing a wide area of trees"
+        " [noun] the action of clearing a wide area of trees",
+
+        "greenhouse gases":
+        "Any gas in Earth's atmosphere that absorbs infrared radiation and traps heat, causing the greenhouse effect",
+
+        "greenhouse effect":
+        "The warming of Earth's surface and lower atmosphere caused by gases that let sunlight in but trap outgoing heat",
+
+        "Chlorofluorocarbons":
+        "Chemical compounds made of carbon, chlorine, fluorine, and sometimes hydrogen",
+
+        "organic fertilizer":
+        "A natural plant food made from things that were once alive, like animal waste or dead plants",
+
+        "refrigerants":
+        "Special liquids or gases inside air conditioners and refrigerators that absorb heat and move it outside to make things cold",
+
+        "solvents":
+        "a liquid (or sometimes a gas or solid) that can dissolve other things to make a mixture",
+
+        "propellants":
+        "a substance that pushes or drives something forward",
     };
     //Get the definition
     const definition = definitions[word];
