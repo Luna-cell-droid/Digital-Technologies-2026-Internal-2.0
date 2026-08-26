@@ -604,3 +604,298 @@ body.dyslexia{
     font-size: 25px;
     cursor: pointer;
 }
+/*This is to make this website responsive to any screens*/
+/*for smaller laptops and tablets*/
+@media (max-width: 1000px){
+    .navbar{
+        padding: 10px 20px;
+    }
+    .navbar img{
+        height: 110px;
+    }
+    .links a{
+        font-size: 18px
+    }
+    .links li{
+        margin: 0 5px;
+    }
+    .navbarimage{
+        height: 500px;
+    }
+    .navbariamge-text{
+        width: 90%;
+    }
+    .navbarimage-text h1{
+        font-size: 55px;
+    }
+    .navbariamge-text p{
+        font-size: 21px;
+    }
+    .intro-text{
+        width: 80%;
+    }
+    .intro-text p{
+        font-size: 21px;
+    }
+    .homepage-section-left p{
+        font-size: 20px;
+    }
+    .homepage-link{
+        font-size: 21px;
+        padding: 20px;
+    }
+    .homepage-section-row{
+        gap: 25px;
+    }
+    .homepage-section-row-text p{
+        font-size: 20px;
+    }
+    .webpage-text p{
+        font-size: 20px;
+    }
+    .links-link{
+        font-size: 20px;
+        padding: 20px;
+    }
+    .webpage-row-text p,
+    .webpage-row-text-two p{
+        font-size: 20px;
+    }
+    .weekly-progress-text p{
+        font-size: 20px;
+    }
+}
+/*For phones*/
+@media (max-width: 700px){
+    .navbar{
+        position: absolute;
+        padding: 10px 15px;
+        flex-direction: column;
+        align-items: center;
+    }
+    .navbar img{
+        height: 80px;
+    }
+    .navbar a:first-child{
+        margin-right: 0;
+    }
+    .links{
+        width: 100%;
+    }
+    .links > ul{
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 5px;
+    }
+    .links li{
+        margin: 3px;
+    }
+    .links a{
+        font-size: 15px;
+    }
+    .dropdown-contents{
+        min-width: 240px;
+        left: 50%;
+        transform: translateX(-50%) translateY(-15px);
+    }
+    .dropdown-contents.show{
+        transform: translateX(-50%) translateY(0);
+    }
+    .dropdown-contents li a{
+        font-size: 16px;
+        padding: 10px 15px;
+    }
+    .navbarimage{
+        height: 450px;
+    }
+    .navbarimage-text{
+        width: 90%;
+        top: 60%;
+    }
+    .navbarimage-text h1{
+        font-size: 40px;
+        line-height: 1;
+    }
+    .navbarimage-text p{
+        font-size: 18px;
+        line-height: 1.3;
+    }
+    .intro-section{
+        padding: 40px 20px;
+    }
+    .intro-text{
+        width: 100%;
+    }
+    .intro-text p{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .homepage-section-one{
+        grid-template-columns: 1fr;
+    }
+    .homepage-section-left{
+        width: 100%;
+    }
+    .homepage-section-left p{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .homepage-section-right{
+        width: 100%;
+    }
+    .homepage-link{
+        font-size: 18px;
+        padding: 20px;
+    }
+    .arrow{
+        font-size: 28px;
+    }
+    .homepage-section-two{
+        padding: 20px;
+    }
+    .homepage-section-row{
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+    .homepage-section-row-text p{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .homepage-section-row-img{
+        width: 100%;
+    }
+    .homepage-section-row-img img{
+        width: 100%;
+        height: auto;
+    }
+    .homepage-footer{
+        padding: 40px 20px;
+    }
+    .homepage-footer-text{
+        width: 100%;
+    }
+    .homepage-footer-text p{
+        font-size: 18px;
+    }
+     .webpage-section-one{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+    .webpage-image{
+        width: 100%;
+        height: auto;
+    }
+    .webpage-image img{
+        width: 100%;
+        height: auto;
+    }
+    .webpage-text{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .webpage-text p{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .links-section-right{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    .links-link{
+        width: 100%;
+        font-size: 18px;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .webpage-section-two{
+        padding: 20px;
+    }
+    .webpage-row{
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+    .webpage-row-image,
+    .webpage-row-image-two{
+        width: 100%;
+    }
+    .webpage-row-image img,
+    .webpage-row-image-two img{
+        width: 100%;
+        height: auto;
+    }
+    .webpage-row-text,
+    .webpage-row-text-two{
+        width: 100%;
+        padding: 20px;
+        box-sizing: border-box;
+    }
+    .webpage-row-text p,
+    .webpage-row-text-two p{
+        font-size: 18px;
+        line-height: 1.5;
+    }
+    .webpage-footer{
+        padding: 40px 20px;
+    }
+    .webpage-footer-text{
+        width: 100%;
+    }
+    .webpage-footer-text p{
+        font-size: 18px;
+    }
+    .weekly-introduction{
+        padding: 25px 20px;
+    }
+    .weekly-introduction p{
+        font-size: 18px;
+    }
+    .challenge-list{
+        padding: 20px;
+    }
+    .challenge{
+        grid-template-columns: 30px 1fr;
+    }
+    .challenge-text{
+        font-size: 17px;
+        line-height: 1.5;
+    }
+    .weekly-progress{
+        grid-template-columns: 1fr;
+    }
+    .weekly-progress-text{
+        padding: 25px 20px;
+    }
+    .weekly-progress-text p{
+        font-size: 18px;
+    }
+    .weekly-progress-image{
+        min-height: 250px;
+    }
+    .weekly-footer{
+        padding: 35px 20px;
+    }
+    .weekly-footer p{
+        font-size: 18px;
+    }
+    .jargon-box{
+        width: calc(100% - 40px);
+        max-width: 350px;
+        right: 20px;
+        bottom: 20px;
+        padding: 20px;
+    }
+    .jargon-box h2{
+        font-size: 23px;
+    }
+    .jargon-box p{
+        font-size: 17px;
+    }
+    img{
+        max-width: 100%;
+    }
+}
