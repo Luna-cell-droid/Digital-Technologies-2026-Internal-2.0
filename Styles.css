@@ -390,6 +390,7 @@ body.dyslexia{
     height: 300px;
     display: block;
     object-fit: cover;
+    padding: 10px;
 }
 /*First row text*/
 .webpage-row-text{
