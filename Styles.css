@@ -540,7 +540,7 @@ body.dyslexia{
 }
 /*Image of the progress that is made*/
 .weekly-progress-image{
-    width: 100%;
+    width: 50%;
     min-height: 300px;
     display: flex;
     justify-content: center;
@@ -548,9 +548,9 @@ body.dyslexia{
     box-sizing: border-box;
 }
 .weekly-progress-image img{
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    width: 6cm;
+    height: auto;
+    object-fit: contain;
     display: block;
 }
 /*Footer of weekly challenge webpage*/
@@ -603,6 +603,42 @@ body.dyslexia{
     background: none;
     font-size: 25px;
     cursor: pointer;
+}
+/*This is the contact section*/
+.contact-section{
+    background-color: #A1CCA5;
+    padding: 60px 8%;
+    text-align: center;
+}
+.contact-section h2{
+    font-size: 42px;
+    margin: 0 0 10px;
+}
+.contact-section > p{
+    font-size: 20px;
+    margin-bottom: 40px;
+}
+/*This is the section for contact cards*/
+.contact-cards{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+    max-width: 900px;
+    margin: auto;
+}
+.contact-card{
+    background-color: #E8E0B5;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2); 
+}
+.contact-card h3{
+    font-size: 25px;
+    margin: 0 0 10px;
+}
+.contact-card p{
+    font-size: 19px;
+    margin: 0;
 }
 /*This is to make this website responsive to any screens*/
 /*for smaller laptops and tablets*/

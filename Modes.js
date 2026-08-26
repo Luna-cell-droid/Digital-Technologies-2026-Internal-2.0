@@ -35,54 +35,55 @@ function changeMode(mode) { //This is to change the accessibility modes
 }
 //This is the function that will help to read the webpage out loud 
 function toggleScreenReader(){
+
     //When the screen reader is already reading and you want to stop it
     if (window.speechSynthesis.speaking ||
         window.speechSynthesis.pending) {
-            window.speechSynthesis.cancel();
-            return;
-        }
-        //This gets all the text from the webpage
-        let text = document.body.innerText.trim();
-        //checking if there is any text to read
-        if (text === ""){
-            return;
-        }
-        //This is creating the speech
-        let speech = new SpeechSynthesisUtterance(text);
-        //This controls how the speech should sound like 
-        speech.rate = 1;
-        speech.pitch = 1;
-        speech.volume = 50;
-        //This reads the webpage
-        window.speechSynthesis.speak(speech);
-};
+
+        window.speechSynthesis.cancel();
+        return;
+    }
+
+    //This gets all the text from the webpage
+    let text = document.body.innerText.trim();
+
+    //Checking if there is any text to read
+    if (text === ""){
+        return;
+    }
+
+    //This is creating the speech
+    let speech = new SpeechSynthesisUtterance(text);
+
+    //This controls how the speech should sound
+    speech.rate = 1;
+    speech.pitch = 1;
+    speech.volume = 1;
+
+    //This reads the webpage
+    window.speechSynthesis.speak(speech);
+}
 
 //Weekly challenges system
-// Find all challenge checkboxes
+//Finding all challenge checkboxes
 const challenges = document.querySelectorAll(".challenge-checkbox");
-
-// Find the points displays
+//Finding the points displays
 const weeklyPointsDisplay = document.getElementById("weeklyPoints");
 const totalPointsDisplay = document.getElementById("totalPoints");
-
-// Find the progress message
+//Finding the progress message
 const progressMessage = document.getElementById("progressMessage");
-
-// Find the progress image
+//Find the progress image
 const progressImage = document.getElementById("progressImage");
-//loading saved data
-// Get saved weekly points
+//Get saved weekly points
 let weeklyPoints =
     Number(localStorage.getItem("weeklyPoints")) || 0;
-
-// Get saved total points
+//Get saved total points
 let totalPoints =
     Number(localStorage.getItem("totalPoints")) || 0;
-
-// Get saved checkbox states
+//Get saved checkbox states
 let completedChallenges =
     JSON.parse(localStorage.getItem("completedChallenges")) || [];
-//restoring checkboxes
+//Restoring checkboxes
 challenges.forEach(function(challenge, index) {
 
     if (completedChallenges.includes(index)) {
@@ -92,61 +93,84 @@ challenges.forEach(function(challenge, index) {
     }
 
 });
-//wpdating the website 
-function updateDisplay() {
 
-    // Update weekly points
+
+//Updating the website
+
+function updateDisplay(){
+
+    //Update weekly points
     weeklyPointsDisplay.textContent = weeklyPoints;
 
-    // Update total points
+    //Update total points
     totalPointsDisplay.textContent = totalPoints;
 
 
-    // Update progress message
-    if (weeklyPoints === 0) {
+    //Update progress message AND image
+
+    if (weeklyPoints === 0){
 
         progressMessage.textContent =
-            "LOREM IPSUM";
+            "You can do it!";
+
+        progressImage.src =
+            "Images/weeklychallenges-image3.png";
 
     }
 
-    else if (weeklyPoints <= 20) {
+    else if (weeklyPoints <= 20){
 
         progressMessage.textContent =
-            "LOREM IPSUM";
+            "Keep Going!";
+
+        progressImage.src =
+            "Images/weeklychallenges-image3.png";
 
     }
 
-    else if (weeklyPoints <= 40) {
+    else if (weeklyPoints <= 40){
 
         progressMessage.textContent =
-            "LOREM IPSUM";
+            "You are close to getting gold!";
+
+        progressImage.src =
+            "Images/weeklychallenges-image2.png";
 
     }
 
-    else if (weeklyPoints <= 60) {
+    else if (weeklyPoints <= 60){
 
         progressMessage.textContent =
-            "LOREM IPSUM";
+            "Really proud!";
+
+        progressImage.src =
+            "Images/weeklychallenges-image2.png";
 
     }
 
-    else if (weeklyPoints < 80) {
+    else if (weeklyPoints < 80){
 
         progressMessage.textContent =
-            "LOREM IPSUM";
+            "Nearly reaching the gold!";
+
+        progressImage.src =
+            "Images/weeklychallenges-image1.png";
 
     }
 
-    else {
+    else{
 
         progressMessage.textContent =
-            "LOREM IPSUM";
+            "Come on. You can do it!";
+
+        progressImage.src =
+            "Images/weeklychallenges-image1.png";
 
     }
 
 
-    // Save everything
+    //Save everything
+
     localStorage.setItem(
         "weeklyPoints",
         weeklyPoints
@@ -163,19 +187,25 @@ function updateDisplay() {
     );
 
 }
-//when challenge is clicked
-challenges.forEach(function(challenge, index) {
 
-    challenge.addEventListener("change", function() {
 
-        // Get the points for this challenge
+//When challenge is clicked
+
+challenges.forEach(function(challenge, index){
+
+    challenge.addEventListener("change", function(){
+
+        //Get the points for this challenge
         const points =
             Number(challenge.dataset.points);
-//challenge completed 
-        if (challenge.checked) {
 
-            // Make sure it isn't already counted
-            if (!completedChallenges.includes(index)) {
+
+        //Challenge completed
+
+        if (challenge.checked){
+
+            //Make sure it isn't already counted
+            if (!completedChallenges.includes(index)){
 
                 weeklyPoints =
                     weeklyPoints + points;
@@ -188,11 +218,14 @@ challenges.forEach(function(challenge, index) {
             }
 
         }
-//challenge - unchecked 
-        else {
 
-            // making sure it was previously counted
-            if (completedChallenges.includes(index)) {
+
+        //Challenge unchecked
+
+        else{
+
+            //Making sure it was previously counted
+            if (completedChallenges.includes(index)){
 
                 weeklyPoints =
                     weeklyPoints - points;
@@ -201,7 +234,7 @@ challenges.forEach(function(challenge, index) {
                     totalPoints - points;
 
                 completedChallenges =
-                    completedChallenges.filter(function(number) {
+                    completedChallenges.filter(function(number){
 
                         return number !== index;
 
@@ -212,15 +245,14 @@ challenges.forEach(function(challenge, index) {
         }
 
 
-        //to update everything
+        //Update everything
         updateDisplay();
 
     });
 
 });
-//initial displat
+//Initial display
 updateDisplay();
-
 //This is the section for jargon dictionary
 function showDefinition(word){
     //This is where the dictionary definitions are
