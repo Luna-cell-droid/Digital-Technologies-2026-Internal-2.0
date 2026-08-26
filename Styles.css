@@ -410,7 +410,7 @@ body.dyslexia{
     box-sizing: border-box;
 }
 .webpage-row-text-two p{
-    color: white;
+    color: black;
     font-size: 20px;
     line-height: 1.5;
     margin: 0;
@@ -564,4 +564,43 @@ body.dyslexia{
     font-size: 20px;
     line-height: 1.5;
     margin: 0;
+}
+/*This is where Jargon Dictionary starts*/
+.jargon{
+    text-decoration: underline;
+    text-decoration-style: dotted;
+    cursor: pointer;
+}
+/*This the the Jargon Definition box*/
+.jargon-box{
+    display: none;
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    width: 350px;
+    padding: 25px;
+    box-sizing: border-box;
+    background-color: #E8E0B5;
+    color: #111D13;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+    z-index: 100;
+}
+/*Jargon Title*/
+.jargon-box h2{
+    margin-top: 0;
+    font-size: 26px;
+}
+/*jargon definition*/
+.jargon-box p{
+    font-size: 18px;
+    line-height: 1.5;
+}
+/*The close button of jargon*/
+.close-jargon{
+    float: right;
+    border: none;
+    background: none;
+    font-size: 25px;
+    cursor: pointer;
 }

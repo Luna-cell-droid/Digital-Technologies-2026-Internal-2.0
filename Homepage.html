@@ -52,7 +52,7 @@
             <Br>~ Rachel Carson
             <Br>A climate change is a long term change in the weather patterns and average temperatures that define Earth’s local regional and global climates. 
                 Earth’s climate has changed naturally in time but human activities have created a huge part in these changes. Activities such as burning fossil fuels 
-                since the 1800s and deforestation became a driving force for modern climate change. 
+                since the 1800s and <span class="jargon" onclick="showDefinition('deforestation')">deforestation</span> became a driving force for modern climate change. 
         </p>
     </div>
    </section>
@@ -102,5 +102,11 @@
             <p>LOREM LOREM LOREM LOREM IPSUMIE IPSUM</p>
         </div>
     </section>
+<!--This is the jargon Dictionary Section-->
+    <div id="jargonBox" class="jargon-box">
+        <button class="close-jargon" onclick="closeDefinition()">×</button>
+        <h2 id="jargonTitle"></h2>
+        <p id="jargonDefinition"></p>
+    </div>
 </body>
 </html>

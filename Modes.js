@@ -220,3 +220,24 @@ challenges.forEach(function(challenge, index) {
 });
 //initial displat
 updateDisplay();
+
+//This is the section for jargon dictionary
+function showDefinition(word){
+    //This is where the dictionary definitions are
+    const definitions = {
+        "deforestation": 
+        " [noun] the action of clearing a wide area of trees"
+    };
+    //Get the definition
+    const definition = definitions[word];
+    //Putting the word into the dictionry box
+    document.getElementById("jargonTitle").textContent = word;
+    //Putting the definition into the dictionary box
+    document.getElementById("jargonDefinition").textContent = definition;
+    //Shows the dictionary box
+    document.getElementById("jargonBox").style.display = "block";
+}
+//Closing the jargon dictionary
+function closeDefinition(){
+    document.getElementById("jargonBox").style.display = "none";
+}
