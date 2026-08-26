@@ -276,10 +276,24 @@ function showDefinition(word){
         "Special liquids or gases inside air conditioners and refrigerators that absorb heat and move it outside to make things cold",
 
         "solvents":
-        "a liquid (or sometimes a gas or solid) that can dissolve other things to make a mixture",
+        "A liquid (or sometimes a gas or solid) that can dissolve other things to make a mixture",
 
         "propellants":
-        "a substance that pushes or drives something forward",
+        "A substance that pushes or drives something forward",
+
+        "distinctive isotopic fingerprints":
+        "Unique chemical signatures that can tell us exactly where a substance came from or how it was made",
+
+        "precipitation":
+        "Any water that falls from the clouds in the sky down to the ground",
+        
+        "glaciers":
+        "A huge mass of ice that stays on land all year and moves very slowly downhill",
+
+        "vigorously":
+        "[adverb] in a way that involves physical strength, effort, or energy",
+
+        
     };
     //Get the definition
     const definition = definitions[word];
