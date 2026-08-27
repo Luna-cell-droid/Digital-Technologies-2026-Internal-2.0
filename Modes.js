@@ -293,6 +293,21 @@ function showDefinition(word){
         "vigorously":
         "[adverb] in a way that involves physical strength, effort, or energy",
 
+        "Atmospheric ozone":
+        "A special type of gas made of three oxygen atoms stuck together",
+
+        "troposphere":
+        "The lowest layer of Earth's atmosphere, reaching from the ground up to about 5 to 9 miles (8 to 14 kilometers) high",
+
+        "surface-pollution gases":
+        "Harmful gases found in the air close to the ground where we breathe",
+
+        "ozone layer":
+        "A natural shield high up in the Earth's atmosphere that blocks dangerous rays from the sun",
+
+        "stratosphere":
+        "The second layer of air above the Earth",
+
         
     };
     //Get the definition
