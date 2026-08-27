@@ -308,7 +308,17 @@ function showDefinition(word){
         "stratosphere":
         "The second layer of air above the Earth",
 
-        
+        "commercial logging":
+        "The business of cutting down large numbers of trees to sell the wood for profit",
+
+        "photosynthetic organisms":
+        "Living things that use sunlight to make their own food",
+
+        "plankton":
+        "Tiny living things that drift or float in the water because they are too small or weak to swim against ocean or river currents",
+
+        " ocean acidification":
+        "When the ocean slowly becomes more acidic because it absorbs extra carbon dioxide (CO₂) gas from the air"
     };
     //Get the definition
     const definition = definitions[word];
